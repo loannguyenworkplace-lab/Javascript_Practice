@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Emblema+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-size: 1rem;
+    font-family: "Roboto", sans-serif;
+}
+.container {
+    width: 1600px;
+    margin: auto;
+}
+.subcontainer {
+    width: 85%;
+    margin: atuo;
+}
+#cookies {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    color: white;
+    background-color: black;
+}
+.cookies {
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.cookies a {
+    color: yellow;
+    font-weight: 500;
+    text-decoration: none;
+}
+.cookies btn {
+    border-radius: 5px;
+    padding: 8px 12px 8p 12px;
+    font-size: 1rem;
+    font-family: inherit;
+    cursor: pointer;
+    border: 3px solid white;
+    background-color: black;
+    color: white;
+}
+@media (max-width: 1600px) {
+    .container {
+        width: 100%;
+    }
+}
+@media (max-width: 1024px) {
+    .cookies {
+        padding: 10px 0;
+    }
+}
