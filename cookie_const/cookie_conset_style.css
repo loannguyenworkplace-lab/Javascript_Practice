@@ -21,6 +21,8 @@ body {
     bottom: 0;
     color: white;
     background-color: black;
+    z-index: 1;
+    display: none;
 }
 .cookies {
     min-height: 70px;
@@ -35,9 +37,9 @@ body {
     font-weight: 500;
     text-decoration: none;
 }
-.cookies btn {
+#cookies_btn {
     border-radius: 5px;
-    padding: 8px 12px 8p 12px;
+    padding: 3px 12px 3px 12px;
     font-size: 1rem;
     font-family: inherit;
     cursor: pointer;

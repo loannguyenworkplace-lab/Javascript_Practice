@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="eng" />
+        <title>Accordion</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="accordion">
+                <h1>Frequently Asked Questions</h1>
+                <p class="intro">
+                    Here are some of the frequently asked questions
+                </p>
+                <div class="questions">
+                    <h2>What is rooadmap.sh?</h2>
+                    <span>v</span>
+                </div>
+                <p class="answers">
+                    roadmap.sh is a community effort to create learning paths,
+                    guides, project ideas and other similar content to help
+                    developers grown in their careers.
+                </p>
+                <div class="questions">
+                    <h2>What are the plans for roadmap.sh?</h2>
+                    <span>v</span>
+                </div>
+                <p class="answers">
+                    The platform will continue adding more roadmaps and learning
+                    resources.
+                </p>
+                <div class="questions">
+                    <h2>is roadmap.sh built?</h2>
+                    <span>v</span>
+                </div>
+                <p class="answers">
+                    It is built using modern web technologies and open-source
+                    tools.
+                </p>
+                <div class="questions">
+                    <h2>Can I use roadmap.sh in my team?</h2>
+                    <span>v</span>
+                </div>
+                <p class="answers">
+                    Yes, you can use it for learning and team training.
+                </p>
+                <div class="questions">
+                    <h2>How can I create custom roadmaps?</h2>
+                    <span>v</span>
+                </div>
+                <p class="answers">
+                    You can create and customize roadmaps with the available
+                    tools.
+                </p>
+                <div class="questions">
+                    <h2>
+                        Is roadmap.sh really 7th most starred project on GitHub?
+                    </h2>
+                    <span>v</span>
+                </div>
+                <p class="answers">
+                    Yes, it is one of the most starred open-source projects on
+                    GitHub.
+                </p>
+            </div>
+        </div>
+        <script>
+            const questionsClick = document.querySelectorAll(".questions");
+            const answersClick = document.querySelectorAll(".answers");
+
+            questionsClick.forEach((question, index) => {
+                question.addEventListener("click", () => {
+                    answersClick.forEach((answer) => {
+                        answer.classList.remove("active");
+                    });
+                    answersClick[index].classList.add("active");
+                });
+                question.addEventListener("dblclick", () => {
+                    answersClick[index].classList.remove("active");
+                });
+            });
+        </script>
+    </body>
+</html>

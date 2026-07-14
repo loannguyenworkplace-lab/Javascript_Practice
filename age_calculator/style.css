@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Cause:wght@100..900&display=swap");
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Cause", cursive;
+    color: black;
+}
+.container {
+    border: none;
+    width: 300px;
+    margin: 0px 10px;
+}
+h1 {
+    text-align: center;
+}
+p {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 5px 0;
+}
+#dateInput {
+    width: 280px;
+    height: 30px;
+    border-radius: 5px;
+    margin: 3px 0;
+    border: 2px solid black;
+    background-color: white;
+}
+#calculate {
+    width: 285px;
+    height: 30px;
+    border-radius: 5px;
+    margin: 3px 0;
+    background-color: gray;
+    border: none;
+    color: white;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.resultText {
+    text-align: center;
+    margin: 10px 0;
+}

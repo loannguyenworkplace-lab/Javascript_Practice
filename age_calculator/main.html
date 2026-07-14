@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="eng">
+    <head>
+        <meta charset="uft-8" />
+        <title>Age Calculator</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <h1>Age Calculator</h1>
+            <p>Enter your birth date:</p>
+            <input type="date" id="dateInput" />
+            <p id="calculate">Calculate</p>
+            <p class="resultText">
+                You are <span id="resultYear">0 year </span>
+                <span id="resultMonth">0 month </span> old
+            </p>
+        </div>
+        <script>
+            const inputDate = document.getElementById("dateInput");
+            const calculateClick = document.getElementById("calculate");
+            const year = document.getElementById("resultYear");
+            const month = document.getElementById("resultMonth");
+
+            calculateClick.addEventListener("click", () => {
+                if (!inputDate.value) {
+                    alert("Vui lòng chọn ngày sinh!");
+                    return;
+                }
+
+                const birthDay = new Date(inputDate.value);
+                const currentDate = new Date();
+
+                if (birthDay > currentDate) {
+                    alert("Ngày sinh không hợp lệ!");
+                    return;
+                }
+
+                let result_year =
+                    currentDate.getFullYear() - birthDay.getFullYear();
+                let result_month = currentDate.getMonth() - birthDay.getMonth();
+
+                if (
+                    currentDate.getMonth() < birthDay.getMonth() ||
+                    (currentDate.getMonth() === birthDay.getMonth() &&
+                        currentDate.getDate() < birthDay.getDate())
+                ) {
+                    result_year--;
+                }
+
+                if (
+                    currentDate.getMonth() === birthDay.getMonth() &&
+                    currentDate.getDate() < birthDay.getDate()
+                ) {
+                    result_month = 11;
+                }
+
+                // trừ ra âm
+                if (currentDate.getMonth() < birthDay.getMonth()) {
+                    result_month += 12;
+                }
+
+                if (result_month <= 0) {
+                    month.textContent = "0 month";
+                } else if (result_month === 1) {
+                    month.textContent = `${result_month} month`;
+                } else {
+                    month.textContent = `${result_month} months`;
+                }
+
+                if (result_year <= 0) {
+                    year.textContent = "0 year";
+                } else if (result_year === 1) {
+                    year.textContent = `${result_year} year`;
+                } else {
+                    year.textContent = `${result_year} years`;
+                }
+            });
+        </script>
+    </body>
+</html>

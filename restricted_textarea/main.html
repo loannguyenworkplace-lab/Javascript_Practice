@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Restricted Textarea</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="message">
+            <p>Write your Message</p>
+            <div id="content">
+                <textarea
+                    id="content_btn"
+                    placeholder="Start typing..."
+                ></textarea>
+                <div class="counter_text">
+                    <span id="charCounter">0</span>/250 ký tự
+                </div>
+            </div>
+        </div>
+        <script>
+            const textInput = document.getElementById("content_btn");
+            const countText = document.getElementById("charCounter");
+            const changeColor = document.getElementById("content");
+
+            textInput.addEventListener("input", () => {
+                const currentLength = textInput.value.length;
+
+                countText.textContent = currentLength;
+                if (currentLength > 250) {
+                    textInput.value = textInput.value.slice(0, 2);
+                    textInput.style.color = "red";
+                    changeColor.style.border = "1px solid red";
+                } else {
+                    textInput.style.color = "black";
+                    changeColor.style.border = "1px solid black";
+                }
+            });
+        </script>
+    </body>
+</html>
