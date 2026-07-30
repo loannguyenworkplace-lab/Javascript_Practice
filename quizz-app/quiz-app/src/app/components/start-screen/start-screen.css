@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Cause:wght@100..900&display=swap');
+
+.start-container{
+  background-color: #F0F7ED;
+  height: 550px;
+  width: 480px;
+  display: flex;
+  justify-content: center;
+  border-radius: 15px;
+  font-family: "Cause", cursive;
+  border: 3px solid #326B1A;
+  }
+.start-card{
+  text-align: center;
+}
+ul{
+  list-style-position: inside;
+  text-align: left;
+}
+h1{
+  font-size:100px;
+  color: red;
+  font-weight: bold;
+}
+.description{
+  font-size: 30px;
+  line-height: 1.5;
+  font-weight: bold;
+}
+.quiz-info{
+  font-size: 20px;
+  line-height: 1.5;
+}
+.start-btn{
+  font-size: 16px;
+  font-weight: bold;
+  padding: 8px 25px;
+  border: 2px solid black;
+  border-radius: 7px;
+  cursor: pointer;
+  background: white;
+  transition: 0.3s;
+}

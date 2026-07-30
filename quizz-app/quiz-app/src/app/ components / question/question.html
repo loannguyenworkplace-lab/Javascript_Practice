@@ -1,0 +1,25 @@
+<div class="quiz-container">
+  <div class="question-card">
+  <div class="quiz-header">
+    <span id="number"> Question {{quizService.questions[quizService.currentQuestionIndex]?.id}} of 5</span>
+  </div>
+  <h2 class="question">
+    {{quizService.questions[quizService.currentQuestionIndex]?.question}}
+  </h2>
+  <div class="answer">
+    <button class="answer-btn" *ngFor="let option of quizService.questions[quizService.currentQuestionIndex]?.options; let i=index"
+      (click)="chooseAnswer(i)"
+      [ngClass]="{
+      'correct':isAnswerd && i === quizService.questions[quizService.currentQuestionIndex].answer,
+      'incorrect': isAnswerd && i === selectedAnswer && i != quizService.questions[quizService.currentQuestionIndex].answer
+      }"
+    >
+      {{option}}
+    </button>
+  </div>
+  <h3 class="score">
+    Score: {{quizService.score }}/{{quizService.questions.length}}
+  </h3>
+  <button class="next-btn" (click)="nextQuestion()">Next</button>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+<div class="end-container">
+    <h1>QUIZ END</h1>
+    <div class="result">
+      <p id="result-score"> Result: {{quizService.score}}/{{quizService.questions.length}}</p>
+      <div *ngFor="let result of quizService.results">
+        <p>Question {{result.question }}
+          {{ result.isCorrect ? '✅ Correct' : '❌ Incorrect' }}
+        </p>
+      </div>
+    </div>
+      <button class="return-btn" (click)="reStart()">Restart</button>
+</div>

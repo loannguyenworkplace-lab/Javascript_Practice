@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Cause:wght@100..900&display=swap');
+  .quiz-container{
+    background-color: #F0F7ED;
+    height: 550px;
+    width: 480px;
+    font-family: "Cause", cursive;
+    border: 3px solid #326B1A;
+    border-radius: 15px;
+    display: flex;
+  }
+  .question-card{
+    text-align: center;
+  }
+  .quiz-header{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin:0;
+  }
+  #number{
+    color: #2D4501;
+    font-size: 16px;
+    font-family: "Cause", cursive;
+    height: 23px;
+    width: 110px;
+    background-color: #FFFFDE;
+    border: 2px solid #326B1A;
+    border-radius: 5px;
+    font-weight: bold;
+    margin: 20px;
+  }
+  .question{
+    text-align: center;
+    margin: 0 20px;
+    font-size: 30px;
+    }
+  .answer{
+    font-size: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 200px);
+    grid-template-rows: repeat(2, 100px);
+    gap: 10px;
+    justify-content: center;
+    margin: 40px;
+  }
+  .answer-btn{
+    background-color: white;
+    height: 90px;
+    border-radius: 10px;
+    word-wrap: break-word;
+    font-size: 16px;
+    font-family: "Cause", cursive;
+  }
+  .score{
+    margin-left: 20px;
+    font-size: 18px;
+    color: #1F3001;
+    text-align: left;
+  }
+  .next-btn{
+    font-size: 16px;
+    font-weight: bold;
+    padding: 8px 25px;
+    border: 2px solid black;
+    border-radius: 7px;
+    cursor: pointer;
+    background: white;
+  }
+  .correct{
+    background-color: yellowgreen;
+    color: white;
+  }
+  .incorrect{
+    background-color: red;
+    color: white;
+  }

@@ -1,0 +1,53 @@
+[
+  {
+    "id": 1,
+    "question":"Which language is used by Angular?",
+    "options":[
+      "Java", "TypeScript", "Python", "C#"],
+    "answer": 1
+  },
+  {
+    "id": 2,
+    "question": "What does HTML stand for?",
+    "options":[
+      "Hyper Text Markup Language",
+      "High Text Machine Language",
+      "Hyper Tool Multu Language",
+      "Home Tool Markup Language"
+    ],
+    "answer":1
+  },
+  {
+    "id": 3,
+    "question": "Which company develops Angular?",
+    "options": [
+      "Meta",
+      "Microsoft",
+      "Google",
+      "Amazon"
+    ],
+    "answer": 2
+  },
+  {
+    "id": 4,
+    "question": "Which CSS property is used to change the text color?",
+    "options": [
+      "background-color",
+      "font-color",
+      "text-color",
+      "color"
+    ],
+    "answer": 3
+  },
+  {
+    "id": 5,
+    "question": "Which method is commonly used to send an HTTP GET request in Angular?",
+    "options": [
+      "HttpClient.get()",
+      "fetchData()",
+      "axios.get()",
+      "request.get()"
+    ],
+    "answer": 0
+  }
+]
