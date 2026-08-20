@@ -1,0 +1,87 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    margin-top: 100px;
+    border: 3px solid black;
+    width: 400px;
+    height: 700px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(45deg, #CFF0FF, #88D1B9, #6E199C);
+}
+.search{
+    position: relative;
+    width: 380px;
+}
+#location {
+    margin: 30px;
+    width: 300px;
+    height: 30px;
+    border: 1px solid white;
+    border-radius: 20px;
+    font-size: 16px;
+    padding-left: 20px;
+    color: black;
+}
+#search-btn{
+    position: absolute;
+    background: none;
+    border: none;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+}
+#image{
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+#temperature, #city{
+    margin: 0;
+    text-align: center;
+    color: white;
+}
+#temperature{
+    font-size: 50px;
+}
+#city{
+    font-size: 35px;
+}
+.info{
+    margin: 30px 60px;
+    display: flex;
+    color: white;
+    font-size: 18px;
+    line-height: 0.5;
+}
+
+#humidity-image{
+    width: 100%;
+    max-width: 50px;
+    height: auto;
+    background: none;
+    border: none;
+}
+.likelihood{
+    flex: 1;
+    text-align: left;
+}
+.wind-speed{
+    flex: 1;
+    text-align: right;
+}
+#wind-speed-image{
+    width: 100%;
+    max-width: 50px;
+    height: auto;
+    background: none;
+    border: none;
+}

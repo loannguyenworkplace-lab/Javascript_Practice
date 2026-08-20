@@ -1,0 +1,71 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+}
+h1{
+    font-size: 32px;
+    font-weight: bold;
+}
+.container
+{
+    width: 450px;
+    height: 700px;
+    border: 2px solid black;
+    border-radius: 30px;
+}
+header{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+.options{
+    width: 370px;
+    height: 40px;
+    display: block;
+    margin: 0 auto;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 16px;
+    padding-left: 10px;
+}
+#description{
+    width: 350px;
+    min-height: 150px;
+    border-radius: 10px;
+    display: block;
+    margin: 25px auto 0;
+    padding: 10px;
+    background: #F2F2F2;
+}
+#refresh-btn{
+    display: block;
+    margin: 25px auto 0;
+    width: 370px;
+    height: 40px;
+    color: white;
+    background: black;
+    font-size: 17px;
+    border-radius: 10px;
+}
+#refresh-btn.hidden{
+    display: none;
+}
+.state{
+    color: black;
+    font-size: 16px;
+    text-align: center;
+    background: #F2F2F2;
+}
+#description.error-state{
+    background-color: #FFC7C7;
+}
+#refresh-btn.retry{
+    color: black;
+    font-size: 16px;
+    text-align: center;
+    background-color:  #C41A1A;
+}

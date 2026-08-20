@@ -1,0 +1,27 @@
+<div class="timer">
+  <div class="time-content">
+    <div class="settings">
+      <h3>Settings</h3>
+      <label> Work (minutes)
+        <input type="number" [(ngModel)]="settings.workTime" min="1" max="60">
+      </label>
+      <label> Short Break (minutes)
+        <input type="number" [(ngModel)]="settings.shortBreakTime" min="1" max="60">
+      </label>
+      <label>Long Break (minutes)
+        <input type="number" [(ngModel)]="settings.longBreakTime" min="1" max="60">
+      </label>
+      <button (click)="applySettings()"> Apply </button>
+    </div>
+    <span class="session-lable">{{sessionType}}</span>
+    <div class="time">{{minutes()}}:{{seconds()}}</div>
+    <div class="button">
+      <button class="start-btn" (click)="startTime()">Start</button>
+      <button class="pause-btn" (click)="pauseTime()">Pause</button>
+      <button class="resume-btn" (click)="resumeTime()">Resume</button>
+      <button class="reset-btn" (click)="resetTime()">Reset</button>
+    </div>
+    <p class="counterSession">Counter sessions: {{counter}}</p>
+    <p class="status">Ready to focus</p>
+  </div>
+</div>

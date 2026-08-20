@@ -28,7 +28,7 @@
 
                 countText.textContent = currentLength;
                 if (currentLength > 250) {
-                    textInput.value = textInput.value.slice(0, 2);
+                    textInput.value = textInput.value.slice(0, 250);
                     textInput.style.color = "red";
                     changeColor.style.border = "1px solid red";
                 } else {

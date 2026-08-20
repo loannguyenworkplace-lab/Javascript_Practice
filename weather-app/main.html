@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Weather app</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="weather-container">
+                <div class="search">
+                    <input id="location" type="text" placeholder="Enter City Name"/>
+                    <button id="search-btn">🔍</button>
+                </div>
+                <img src="sun.png" id="image">
+                <p id="temperature">22°c</p>
+                <p id="city">New York</p>
+                <div class="info">
+                    <div class="likelihood">
+                        <img src="humidity.png" id="humidity-image">
+                        <p>Humidify</p>
+                        <p id="humidity">92</p>
+                    </div>
+                    <div class="wind-speed">
+                        <img src="wind.png" id="wind-speed-image">
+                        <p>Wind Speed</p>
+                        <p id="wind">6.2km/h</p>
+                    </div>
+                </div>
+           </div>
+        </div>
+        <script>
+            const inputCiy = document.getElementById("location");
+            const inputSearch = document.getElementById("search-btn");
+            const cityName = document.getElementById("city");
+            const currentTemperature = document.getElementById("temperature");
+            const currentHumidity = document.getElementById("humidity");
+            const currentWind = document.getElementById("wind");
+
+
+            function upperCase(text){
+              return text.split(" ").map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()).join(" ");
+            }
+
+            inputSearch.addEventListener("click",async ()=>{
+                const city = upperCase(inputCiy.value);
+                getWeather(city);
+                inputCiy.value = "";
+            })
+
+            async function getWeather(city){
+                const geoUrl =`https://geocoding-api.open-meteo.com/v1/search?name=${city}&count=1`;
+                const geoResponse = await fetch(geoUrl);
+                const geoData = await geoResponse.json();
+
+                if(!geoData.results){
+                    alert("No found");
+                    return;
+                }
+
+                const latitude = geoData.results[0].latitude;
+                const longitude = geoData.results[0].longitude;
+                const url = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current=temperature_2m,relative_humidity_2m,wind_speed_10m"`;
+                const response = await fetch(url);
+                const data = await response.json();
+
+                cityName.textContent = geoData.results[0].name;
+                currentTemperature.textContent = data.current.temperature_2m + "°c";
+                currentHumidity.textContent = data.current.relative_humidity_2m;
+                currentWind.textContent = data.current.wind_speed_10m +"km/h";
+            }
+        </script>
+    </body>
+</html>

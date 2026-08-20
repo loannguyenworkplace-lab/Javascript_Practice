@@ -1,0 +1,46 @@
+.settings{
+  margin: 30px 0;
+}
+input, label, select{
+  margin: 0 20px 0 0;
+   font-size: 16px;
+}
+.timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+}
+.session-lable{
+  color: red;
+  font-size: 40px;
+  font-weight: 800;
+  margin: 30px;
+}
+.time {
+  color: #172033;
+  font-size: 80px;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  margin: 40px;
+}
+
+.status {
+  margin-top: 30px;
+  color: seagreen;
+  font-size: 20px;
+  font-weight: 600;
+}
+.button{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+.start-btn, .pause-btn, .resume-btn, .reset-btn{
+  background: gainsboro;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 2px 4px;
+  color: black;
+  margin: 0 20px;
+}

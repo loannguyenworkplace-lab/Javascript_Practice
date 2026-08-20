@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { EndComponent } from './end';
+import { Timer } from './timer';
 
-describe('End', () => {
-  let component: EndComponent;
-  let fixture: ComponentFixture<EndComponent>;
+describe('Timer', () => {
+  let component: Timer;
+  let fixture: ComponentFixture<Timer>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [EndComponent],
+      imports: [Timer],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(EndComponent);
+    fixture = TestBed.createComponent(Timer);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });

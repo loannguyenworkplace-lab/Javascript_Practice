@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Temperature Converter</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <h2>Temperature Converter</h2>
+            <p id="instruction">Enter the temperature, select units and submit</p>
+            <div class="selector-box">
+                <input id="temperature" placeholder="0.00">
+                <select id="from-unit">
+                    <option value="">From Unit</option>
+                    <option value="Fahrenheit">Fahrenheit</option>
+                    <option value="Celsius">Celsius</option>
+                    <option value="Kelvin">Kelvin</option>
+                </select>
+                <select id="to-unit">
+                    <option value="">To Unit</option>
+                    <option value="Fahrenheit">Fahrenheit</option>
+                    <option value="Celsius">Celsius</option>
+                    <option value="Kelvin">Kelvin</option>
+                </select>
+                <button id="convert">Convert</button>
+            </div>
+            <p id="result"></p>
+        </div>
+        <script>
+            const temperature = document.getElementById("temperature");
+            const fromUnit = document.getElementById("from-unit");
+            const toUnit = document.getElementById("to-unit");
+            const convertBtn = document.getElementById("convert");
+            const finalResult = document.getElementById("result");
+
+            function caculation(value, from, to){
+              if (from === to){
+                alert("Please select units again");
+              return;
+              }
+
+              if(isNaN(value)){
+                alert("Temperature must be number");
+                return;
+              }
+
+              if (from === "Celsius") {
+                  if (to === "Fahrenheit") return ((value * 9 / 5) + 32);
+                  if (to === "Kelvin") return value + 273.15;
+              };
+
+              if (from === "Fahrenheit") {
+                  if (to === "Celsius") return (value - 32) * 5 / 9;
+                  if (to === "Kelvin") return (value - 32) * 5 / 9 + 273.15;
+              };
+
+              if (from === "Kelvin") {
+                  if (to === "Celsius") return (value - 273.15);
+                  if (to === "Fahrenheit") return (value - 273.15) * 9 / 5 + 32;
+              };
+            }
+
+            convertBtn.addEventListener("click",()=>{
+              const value = Number(temperature.value);
+              const from = fromUnit.value;
+              const to = toUnit.value;
+              const result = Math.floor(Number(caculation(value, from, to)));
+              finalResult.textContent =`${value} ${from} is ${result} ${to}`;
+            });
+        </script>
+    </body>
+</html>
